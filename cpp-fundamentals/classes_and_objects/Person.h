@@ -12,4 +12,9 @@ class Person {
         Person();
         ~Person();
         std::string getName();
+        int getNumber() const {return arbitrarynumber;}
+        bool operator<(Person const& p) const;
+        bool operator<(int i) const;
 };
+
+bool operator<(int i, Person const& p);
